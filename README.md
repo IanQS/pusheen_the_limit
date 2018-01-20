@@ -9,7 +9,7 @@ I made this public because I thought people might enjoy it too :)
 ## Results
 
 ![Heart Pusheen](https://github.com/IanQS/pusheen_the_limit/blob/master/imgSrc/2.png)
-
+```
 .....................,,,.,,,......................
 .....................i@sr5s,......................
 ................,:,...:ir:,.......................
@@ -38,9 +38,7 @@ I made this public because I thought people might enjoy it too :)
 ..................................................
 ..................................................
 ............rr......3ii...........................
-
-
-
+```
 ---
 
 ## Installation
