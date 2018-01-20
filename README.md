@@ -42,9 +42,19 @@ python __main__.py -rm True
 
 ```
 
-2) Shell command
+---
+
+2) Shell Commands - add to the bottom of your .rc file so that it runs on every shell startup
+
+a) ZSH
 
 ```
 rand() REPLY=$RANDOM
 cat ~/.pusheens/*(o+rand[1])
 ```
+b)
+```
+find ~/.pusheens -type f -print0 | shuf -zn1 | xargs -0 cat
+```
+
+although please know that this [isn't safe](https://askubuntu.com/questions/849665/cat-a-random-file-in-terminal) and I didn't put much effort into this because I use zsh
