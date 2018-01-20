@@ -1,6 +1,8 @@
 ## Stop Pusheen my buttons ##
 
-I've always thought Pusheen was cute. Now I get to have images of Pusheen on my terminal pop up whenever I open it!
+I've always thought Pusheen was cute. Now I get to have random ASCII art of my favorite Pusheens show up on my terminal pop up whenever I open it!
+
+I made this public because I thought people might enjoy it too :)
 
 -------------------------------------------------------------------------------
 
@@ -15,13 +17,15 @@ assuming you have [virtualenvwrapper](http://virtualenvwrapper.readthedocs.io/en
 -------------------------------------------------------------------------------
 # Usage
 
-1) Python Script
+### Python Script
 
 ```
 rm -rf imgDest; rm -rf ~/imgDest; rm -rf ~/.pusheens; python __main__.py; cp -r imgDest ~/imgDest; mv ~/imgDest ~/.pusheens
 ```
 
 Removes any lingering images you've got stored, then runs the script with the default arguments and copies the results to your desktop folder from which you can source from your bashrc.
+
+### Short blurbs of Python
 
 ```python
 # Tuple to resize the pusheen images to
@@ -44,17 +48,23 @@ python __main__.py -rm True
 
 ---
 
-2) Shell Commands - add to the bottom of your .rc file so that it runs on every shell startup
+### Shell Commands
 
-a) ZSH
+add to the bottom of your .rc file so that it runs on every shell startup
+
+a) zsh
 
 ```
 rand() REPLY=$RANDOM
 cat ~/.pusheens/*(o+rand[1])
 ```
-b)
+
+
+b) bash or whatever. Who knows who cares move to zsh
+
+
 ```
 find ~/.pusheens -type f -print0 | shuf -zn1 | xargs -0 cat
 ```
 
-although please know that this [isn't safe](https://askubuntu.com/questions/849665/cat-a-random-file-in-terminal) and I didn't put much effort into this because I use zsh
+In all seriousness, please know that this bash script [isn't safe](https://askubuntu.com/questions/849665/cat-a-random-file-in-terminal)
